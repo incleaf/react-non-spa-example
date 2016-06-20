@@ -4,8 +4,8 @@
   "description": "Non SPA React Application Example",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build",
+    "dev": "NODE_ENV=development gulp",
+    "build": "NODE_ENV=production gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

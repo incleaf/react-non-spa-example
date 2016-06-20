@@ -1,5 +1,5 @@
 {
-  "presets": ["es2015", "stage-3", "react", "react-hmre"],
+  "presets": ["es2015", "stage-3", "react"],
   "plugins": [
     "transform-es2015-destructuring",
     "transform-object-rest-spread",
@@ -7,5 +7,16 @@
       "polyfill": true,
       "regenerator": true
     }]
-  ]
+  ],
+  "env": {
+      "development": {
+        "plugins": [["react-transform", {
+          "transforms": [{
+            "transform": "react-transform-hmr",
+            "imports": ["react"],
+            "locals": ["module"]
+          }]
+        }]]
+      }
+    }
 }
