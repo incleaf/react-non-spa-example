@@ -3,19 +3,11 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'source-map',
   stats: {
     colors: true,
-    reasons: true
   },
   module: {
     loaders: [{
-      test: /\.scss$/,
-      loaders: ["style", "css", "sass"]
-    }, {
-      test: /\.css$/, // Only .css files
-      loader: 'style!css' // Run both loaders
-    }, {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel'
